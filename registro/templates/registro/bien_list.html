@@ -1,0 +1,77 @@
+{% extends "base/base.html" %}
+{% block titulo %}Lista de bienes{% endblock %}
+{% block cuerpo %}
+<h1>Lista de Bienes</h1>
+
+<br />
+
+<table border="1px" id="example" class="display" cellspacing="0px" style="width:100%;">
+  <thead>
+    <tr>
+      <th>N</th>
+      <th>Acciones</th>
+      <th>Ente u órgano ejecutor del proyecto.</th>
+      <th>Año.</th>
+      <th>Tipo de proyecto.</th>
+      <th>Área de impacto del proyecto.</th>
+      <th>Objetivo de desarrollo sostenible.</th>
+      <th>Línea estratégica del Plan de la Patria 2013-2019.</th>
+      <th>Contribución del proyecto al Plan Nacional de Telecomunicaciones, Tecnologías de Información y Servicios Postales 2013-2019.</th>
+      <th>Nombre del proyecto.</th>
+      <th>Objetivo del proyecto.</th>
+      <th>Actividades asociadas a la meta.</th>
+      <th>Objetivo de la actividad.</th>
+      <th>Meta.</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>N</th>
+      <th>Acciones</th>
+      <th>Ente u órgano ejecutor del proyecto.</th>
+      <th>Año.</th>
+      <th>Tipo de proyecto.</th>
+      <th>Área de impacto del proyecto.</th>
+      <th>Objetivo de desarrollo sostenible.</th>
+      <th>Línea estratégica del Plan de la Patria 2013-2019.</th>
+      <th>Contribución del proyecto al Plan Nacional de Telecomunicaciones, Tecnologías de Información y Servicios Postales 2013-2019.</th>
+      <th>Nombre del proyecto.</th>
+      <th>Objetivo del proyecto.</th>
+      <th>Actividades asociadas a la meta.</th>
+      <th>Objetivo de la actividad.</th>
+      <th>Meta.</th>
+      <th>Acciones</th>
+    </tr>
+  </tfoot>
+  <tbody>
+  {% for x in object_list %}
+  <tr>
+    <td></td>
+    <td>
+      <a href="{% url 'registro:editar_bien' x.id %}"><i class="glyphicon glyphicon-pencil"></i></a>
+      &nbsp; | &nbsp;
+      <a href="{% url 'registro:borrar_bien' x.id %}"><i class="glyphicon glyphicon-trash"></i></a>
+    </td>
+    <td>{{ x.campo1 }}</td>
+    <td>{{ x.campo2 }}</td>
+    <td>{{ x.campo3 }}</td>
+    <td>{{ x.campo4 }}</td>
+    <td>{{ x.campo5 }}</td>
+    <td>{{ x.campo6 }}</td>
+    <td>{{ x.campo7 }}</td>
+    <td>{{ x.campo8 }}</td>
+    <td>{{ x.campo9 }}</td>
+    <td>{{ x.campo10 }}</td>
+    <td>{{ x.campo11 }}</td>
+    <td>{{ x.campo12 }}</td>
+    <td>
+      <a href="{% url 'registro:editar_bien' x.id %}"><i class="glyphicon glyphicon-pencil"></i></a>
+      &nbsp; | &nbsp;
+      <a href="{% url 'registro:borrar_bien' x.id %}"><i class="glyphicon glyphicon-trash"></i></a>
+    </td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

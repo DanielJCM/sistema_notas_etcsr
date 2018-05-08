@@ -1,0 +1,10 @@
+*.*.backup
+*.*~
+*.tar.gz
+*.pyc
+*.log
+*.swp
+db.sqlite3
+manage.py
+registro/migrations
+inventario/settings.py
