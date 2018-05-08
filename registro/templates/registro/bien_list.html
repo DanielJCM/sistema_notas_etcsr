@@ -9,38 +9,38 @@
   <thead>
     <tr>
       <th>N</th>
-      <th>Acciones</th>
-      <th>Ente u órgano ejecutor del proyecto.</th>
-      <th>Año.</th>
-      <th>Tipo de proyecto.</th>
-      <th>Área de impacto del proyecto.</th>
-      <th>Objetivo de desarrollo sostenible.</th>
-      <th>Línea estratégica del Plan de la Patria 2013-2019.</th>
-      <th>Contribución del proyecto al Plan Nacional de Telecomunicaciones, Tecnologías de Información y Servicios Postales 2013-2019.</th>
-      <th>Nombre del proyecto.</th>
-      <th>Objetivo del proyecto.</th>
-      <th>Actividades asociadas a la meta.</th>
-      <th>Objetivo de la actividad.</th>
-      <th>Meta.</th>
+      <th>Asignado a</th>
+      <th>Código de inventario del Bien</th>
+      <th>Número de puesto asignado al Bien</th>
+      <th>Situación Jurídica del Bien</th>
+      <th>Descripción del bien</th>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Serial</th>
+      <th>Color</th>
+      <th>Estado</th>
+      <th>Año</th>
+      <th>Observaciones</th>
+      <th>Características Técnicas</th>
       <th>Acciones</th>
     </tr>
   </thead>
   <tfoot>
     <tr>
       <th>N</th>
-      <th>Acciones</th>
-      <th>Ente u órgano ejecutor del proyecto.</th>
-      <th>Año.</th>
-      <th>Tipo de proyecto.</th>
-      <th>Área de impacto del proyecto.</th>
-      <th>Objetivo de desarrollo sostenible.</th>
-      <th>Línea estratégica del Plan de la Patria 2013-2019.</th>
-      <th>Contribución del proyecto al Plan Nacional de Telecomunicaciones, Tecnologías de Información y Servicios Postales 2013-2019.</th>
-      <th>Nombre del proyecto.</th>
-      <th>Objetivo del proyecto.</th>
-      <th>Actividades asociadas a la meta.</th>
-      <th>Objetivo de la actividad.</th>
-      <th>Meta.</th>
+      <th>Asignado a</th>
+      <th>Código de inventario del Bien</th>
+      <th>Número de puesto asignado al Bien</th>
+      <th>Situación Jurídica del Bien</th>
+      <th>Descripción del bien</th>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Serial</th>
+      <th>Color</th>
+      <th>Estado</th>
+      <th>Año</th>
+      <th>Observaciones</th>
+      <th>Características Técnicas</th>
       <th>Acciones</th>
     </tr>
   </tfoot>
@@ -48,11 +48,7 @@
   {% for x in object_list %}
   <tr>
     <td></td>
-    <td>
-      <a href="{% url 'registro:editar_bien' x.id %}"><i class="glyphicon glyphicon-pencil"></i></a>
-      &nbsp; | &nbsp;
-      <a href="{% url 'registro:borrar_bien' x.id %}"><i class="glyphicon glyphicon-trash"></i></a>
-    </td>
+    <td>{{ x.campo0 }}</td>
     <td>{{ x.campo1 }}</td>
     <td>{{ x.campo2 }}</td>
     <td>{{ x.campo3 }}</td>

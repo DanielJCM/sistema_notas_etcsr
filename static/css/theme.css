@@ -1,7 +1,7 @@
 body {
   padding-top: 70px;
   padding-bottom: 30px;
-  background: #1c6ead;
+  background: #353535;
   background-image: url("../img/intro.svg") !important;
   background-size: 100%;
 }
@@ -52,18 +52,6 @@ ul.errorlist {
   display: inline;
 }
 
-.duro {
-  background: red;
-}
-
-.nini {
-  background: gray;
-}
-
-.contrario {
-  background: lightblue;
-}
-
 .form-control {
   margin-bottom: 25px !important;
 }
@@ -105,9 +93,10 @@ ul.errorlist {
   border-radius: 0px;
   /*-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);*/
-  -webkit-box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
+  /*-webkit-box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
-  box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);*/
+  border: none;
 }
 
 .glyphicon.glyphicon-pencil {

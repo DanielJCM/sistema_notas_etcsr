@@ -21,11 +21,9 @@ class Index(TemplateView):
     """
     template_name = "registro/index.html"
 
-
 #############################
 ##### Crud de los Bienes #####
 #############################
-
 
 class Consultar_bien(ListView):
     model = Bien

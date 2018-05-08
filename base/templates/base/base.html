@@ -73,62 +73,12 @@
     <div class="container theme-showcase" role="main">
 
       <br />
-      <a href="/">
-        <img class="banner_principal" src="{% static 'img/banner_principal.jpg' %}" width="100%"></img>  
-      </a>
-
-      <br />
-      <br />
-
-      <!-- Navbar class
-      ================================================== -->
-      <nav class="navbar navbar-default">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">
-              <i class="glyphicon glyphicon-home"></i>
-              Inicio
-            </a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-
-            <!-- Actividades dropdown
-            ================================================== -->
-            <ul class="nav navbar-nav">
-
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  <i class="glyphicon glyphicon-tasks"></i>
-                  &nbsp;Bienes <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="{% url 'registro:registrar_bien' %}">
-                      <i class="glyphicon glyphicon-pencil"></i>
-                        Registrar Bien
-                    </a>
-                  </li>
-                  <li>
-                    <a href="{% url 'registro:consultar_bien' %}">
-                      <i class="glyphicon glyphicon-list"></i>
-                      &nbsp;Listar Bien
-                    </a>
-                  </li>
-                </ul>
-              </li>
-
-            </ul>
-
-          </div>
+      <div class="well">
+        <div align="center">
+          <img src="{% static 'img/cenditel-logo-red.png' %}" width="100px"></img>
+          <h1>Registro de bienes de CENDITEL</h1>
         </div>
-      </nav>
-      <!-- End Navbar class -->
+      </div>
 
       {% if messages %}
         {% for message in messages %}
@@ -145,6 +95,57 @@
       <!-- Cuerpo class
       ================================================== -->
       <div class="well">
+
+        <!-- Navbar class
+        ================================================== -->
+        <nav class="navbar navbar-default">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">
+                <i class="glyphicon glyphicon-home"></i>
+                Inicio
+              </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+
+              <!-- Actividades dropdown
+              ================================================== -->
+              <ul class="nav navbar-nav">
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <i class="glyphicon glyphicon-tasks"></i>
+                    &nbsp;Bienes <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="{% url 'registro:registrar_bien' %}">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                          Registrar Bien
+                      </a>
+                    </li>
+                    <li>
+                      <a href="{% url 'registro:consultar_bien' %}">
+                        <i class="glyphicon glyphicon-list"></i>
+                        &nbsp;Listar Bien
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+              </ul>
+
+            </div>
+          </div>
+        </nav>
+        <!-- End Navbar class -->
+
         {% block cuerpo %}
         {% endblock %}
       </div>
