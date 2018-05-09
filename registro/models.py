@@ -21,6 +21,7 @@ class Bien(models.Model):
     campo10 = models.CharField(max_length=3000, blank=True,null=True)
     campo11 = models.CharField(max_length=3000, blank=True,null=True)
     campo12 = models.CharField(max_length=3000, blank=True,null=True)
+    campo13 = models.CharField(max_length=3000, blank=True,null=True)
 
     def __unicode__(self):
         return self.campo1

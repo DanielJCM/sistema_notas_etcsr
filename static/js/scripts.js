@@ -100,9 +100,9 @@ $(document).ready(function() {
       {
         extend: 'excelHtml5',
       },
-      /*{
+      {
         extend: 'pdfHtml5',
-      },*/
+      },
       /*{
         extend: 'print',
       },*/

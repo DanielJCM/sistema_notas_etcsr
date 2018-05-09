@@ -13,7 +13,14 @@ sit_jur = (
     ('Comodato', 'Comodato'),
     ('Préstamo', 'Préstamo'),
 )
-
+estados = (
+    ('-', '-'),
+    ('Operativo','Operativo'),
+    ('Averiado','Averiado'),
+    ('En reparación','En reparación'),
+    ('Desuso','Desuso'),
+    ('Desincorporado','Desincorporado'),
+)
 
 class BienForm(forms.ModelForm):
     """
@@ -72,11 +79,10 @@ class BienForm(forms.ModelForm):
         #'placeholder': des_campo8,
     }), required = False)
 
-    campo9 = forms.CharField(label='Estado', widget=Textarea(attrs={
+    campo9 = forms.ChoiceField(label='Estado', widget=Select(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        #'placeholder': des_campo9,
-    }), required = False)
+    }), choices = estados)
 
     campo10 = forms.CharField(label='Año', widget=TextInput(attrs={
         'class':'form-control input-md',
@@ -91,6 +97,12 @@ class BienForm(forms.ModelForm):
     }), required = False)
 
     campo12 = forms.CharField(label='Características Técnicas', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+        #'placeholder': des_campo12,
+    }), required = False)
+
+    campo13 = forms.CharField(label='Valor del Bien', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         #'placeholder': des_campo12,
