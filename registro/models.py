@@ -5,6 +5,9 @@ from datetime import datetime
 
 
 class Bien(models.Model):
+    """
+    Modelo de un bien de CENDITEL.
+    """
     campo0 = models.CharField(max_length=3000, blank=True,null=True)
     campo1 = models.CharField(max_length=3000, blank=True,null=True)
     campo2 = models.CharField(max_length=3000, blank=True,null=True)

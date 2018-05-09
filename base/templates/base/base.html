@@ -73,12 +73,6 @@
     <div class="container theme-showcase" role="main">
 
       <br />
-      <div class="well">
-        <div align="center">
-          <img src="{% static 'img/cenditel-logo-red.png' %}" width="100px"></img>
-          <h1>Registro de bienes de CENDITEL</h1>
-        </div>
-      </div>
 
       {% if messages %}
         {% for message in messages %}
@@ -92,9 +86,18 @@
         {% endfor %}
       {% endif %}
       
-      <!-- Cuerpo class
+      <!-- Well class
       ================================================== -->
       <div class="well">
+
+        <div class="jumbotron">
+          <div align="center">
+            <a href="/">
+              <img src="{% static 'img/cenditel-logo-red.png' %}" width="100px"></img>
+            </a>
+            <h2>Control de Bienes de CENDITEL</h2>
+          </div>
+        </div>
 
         <!-- Navbar class
         ================================================== -->
@@ -146,11 +149,13 @@
         </nav>
         <!-- End Navbar class -->
 
+        <div class="cuerpo">
         {% block cuerpo %}
         {% endblock %}
+        </div>
       </div>
 
-      <!-- End Cuepo class -->
+      <!-- End Well class -->
 
       <div class="well">
         <div align="center">

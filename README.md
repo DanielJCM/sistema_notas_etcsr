@@ -1,4 +1,4 @@
-<h1>Sistema para el registro de bienes de CENDITEL.</h1>
+<h1>Control de bienes de CENDITEL</h1>
 
 <b>Creado por dM</b>
 

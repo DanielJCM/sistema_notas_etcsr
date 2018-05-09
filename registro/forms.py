@@ -7,9 +7,6 @@ from django.forms import (
 from datetime import *
 from django.contrib.admin.widgets import AdminDateWidget
 
-
-date=datetime.today().strftime('%Y-%m-%d')
-
 sit_jur = (
     ('-', '-'),
     ('Propio', 'Propio'),
@@ -17,15 +14,11 @@ sit_jur = (
     ('Préstamo', 'Préstamo'),
 )
 
-"""
-Capcidad del disco duro
-Memoria RAM instalada
-Version del Sistema Operativo Instalado.
-Arquitectura del procesador usada por el SO.
-"""
 
 class BienForm(forms.ModelForm):
-
+    """
+    Formulario con los campos de un bien de CENDITEL.
+    """
     campo0 = forms.CharField(label='Asignado a', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',

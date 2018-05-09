@@ -21,15 +21,21 @@ class Index(TemplateView):
     """
     template_name = "registro/index.html"
 
-#############################
+##############################
 ##### Crud de los Bienes #####
-#############################
+##############################
 
 class Consultar_bien(ListView):
+    """
+    Clase que permite consultar la lista de bienes registrados.
+    """
     model = Bien
 
 
 class Registrar_bien(SuccessMessageMixin,CreateView):
+    """
+    Clase que permite registrar un bien en el sistema.
+    """
     model = Bien
     form_class = BienForm
     success_url = reverse_lazy('registro:consultar_bien')
@@ -37,6 +43,9 @@ class Registrar_bien(SuccessMessageMixin,CreateView):
 
 
 class Editar_bien(SuccessMessageMixin,UpdateView):
+    """
+    Clase que permite editar la data guardada de un bien.
+    """
     model = Bien
     form_class = BienForm
     success_url = reverse_lazy('registro:consultar_bien')
@@ -44,10 +53,17 @@ class Editar_bien(SuccessMessageMixin,UpdateView):
 
 
 class Borrar_bien(SuccessMessageMixin,DeleteView):
+    """
+    Clase que permite borrar un bien registrado en el sistema.
+    """
     model = Bien
     success_url = reverse_lazy('registro:consultar_bien')
     success_message = "Se elimino el bien con éxito"
 
     def delete(self, request, *args, **kwargs):
+        """
+        Función que permite mandar un mensaje al
+        template cuando se borra un bien.
+        """
         messages.success(self.request, self.success_message)
         return super(Borrar_bien, self).delete(request, *args, **kwargs)
