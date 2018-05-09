@@ -18,6 +18,12 @@ Usaremos $ para los comandos como usuario regular
 
 ```python
 
+$ cd inventario
+
+$ cp settings.py_example settings.py
+
+$ cd ..
+
 $ bash reset_db.sh
 
 $ python manage.py runserver
