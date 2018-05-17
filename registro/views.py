@@ -39,7 +39,7 @@ class Registrar_bien(SuccessMessageMixin,CreateView):
     model = Bien
     form_class = BienForm
     success_url = reverse_lazy('registro:consultar_bien')
-    success_message = "Se registro el bien con éxito"
+    success_message = "Se ha registrado con éxito"
 
 
 class Editar_bien(SuccessMessageMixin,UpdateView):
@@ -49,7 +49,7 @@ class Editar_bien(SuccessMessageMixin,UpdateView):
     model = Bien
     form_class = BienForm
     success_url = reverse_lazy('registro:consultar_bien')
-    success_message = "Se actualizo el bien con éxito"
+    success_message = "Se ha actualizado con éxito"
 
 
 class Borrar_bien(SuccessMessageMixin,DeleteView):
@@ -58,7 +58,7 @@ class Borrar_bien(SuccessMessageMixin,DeleteView):
     """
     model = Bien
     success_url = reverse_lazy('registro:consultar_bien')
-    success_message = "Se elimino el bien con éxito"
+    success_message = "Se ha eliminado con éxito"
 
     def delete(self, request, *args, **kwargs):
         """

@@ -25,12 +25,12 @@ body {
 }
 
 table thead th {
-  background: #a3baff;
+  background: #008B8B;
   /*color: #ffffff;*/
 }
 
 table tfoot th {
-  background: #a3baff;
+  background: #008B8B;
   /*color: #ffffff;*/
 }
 
@@ -116,4 +116,8 @@ ul.errorlist {
 
 .well-form-fecha {
   display: none;
+}
+
+.jumbotron-green {
+  background: #008B8B;
 }
