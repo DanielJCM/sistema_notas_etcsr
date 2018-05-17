@@ -83,11 +83,11 @@
             <a href="/index">
               <img src="{% static 'img/cenditel-logo-red.png' %}" width="100px"></img>
             </a>
-            <h2>Control de Bienes de CENDITEL</h2>
+            <h2>Sistema de Notas</h2>
           </div>
         </div>
 
-        {% if request.user.is_authenticated %}
+        {#% if request.user.is_authenticated %#}
         <!-- Navbar class
         ================================================== -->
         <nav class="navbar navbar-default">
@@ -113,19 +113,19 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                     <i class="glyphicon glyphicon-tasks"></i>
-                    &nbsp;Bienes <span class="caret"></span>
+                    &nbsp;Registrar Planilla <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu">
                     <li>
                       <a href="{% url 'registro:registrar_bien' %}">
                         <i class="glyphicon glyphicon-pencil"></i>
-                          Registrar Bien
+                          Registrar 
                       </a>
                     </li>
                     <li>
                       <a href="{% url 'registro:consultar_bien' %}">
                         <i class="glyphicon glyphicon-list"></i>
-                        &nbsp;Listar Bien
+                        &nbsp;Listar 
                       </a>
                     </li>
                   </ul>
@@ -160,8 +160,8 @@
           </div>
         </nav>
         <!-- End Navbar class -->
-        {% else %}
-        {% endif %}
+        {#% else %#}
+        {#% endif %#}
 
         {% if messages %}
           {% for message in messages %}

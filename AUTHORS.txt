@@ -1,9 +1,7 @@
 Developers:
-  * Argenis Osorio
-    -@argenisosorio
-    -https://github.com/argenisosorio/
+  * Daniel Contreras
+    -https://github.com/danieljcm/
 
 Testers:
-  * Argenis Osorio
-    -@argenisosorio
-    -https://github.com/argenisosorio/
+  * Daniel Contreras
+    -https://github.com/danieljcm/

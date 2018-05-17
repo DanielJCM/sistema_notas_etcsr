@@ -6,4 +6,4 @@
 *.swp
 db.sqlite3
 registro/migrations
-inventario/settings.py
+sistema_notas_etcsr/settings.py

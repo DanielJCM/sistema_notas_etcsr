@@ -1,7 +1,7 @@
 {% extends "base/base.html" %}
-{% block titulo %}Registrar Bien{% endblock %}
+{% block titulo %}Registrar Planilla{% endblock %}
 {% block cuerpo %}
-<h1>Registrar Bien</h1>
+<h1>Registrar Planilla</h1>
 
 <br />
 
@@ -27,11 +27,11 @@
         {{ form.campo1 }}
       </div>
 
-      <div class="well well-form">
-        <b>{{ form.campo2.label }}</b>
-        <br />
-        {{ form.campo2 }}
-      </div>
+    </div><!-- End Left Column -->
+
+    <!-- Right Column
+    ================================================== -->
+    <div class="col-sm-6">
 
       <div class="well well-form">
         <b>{{ form.campo3.label }}</b>
@@ -40,74 +40,99 @@
       </div>
 
       <div class="well well-form">
-        <b>{{ form.campo4.label }}</b>
+        <b>{{ form.campo2.label }}</b>
         <br />
-        {{ form.campo4 }}
+        {{ form.campo2 }}
       </div>
 
-      <div class="well well-form">
-        <b>{{ form.campo5.label }}</b>
+      <div class="well well-form well-form-fecha">
+        <b>{{ form.fecha.label }}</b>
         <br />
-        {{ form.campo5 }}
-      </div>
-
-      <div class="well well-form">
-        <b>{{ form.campo6.label }}</b>
-        <br />
-        {{ form.campo6 }}
-      </div>
-
-      <div class="well well-form">
-        <b>{{ form.campo7.label }}</b>
-        <br />
-        {{ form.campo7 }}
-      </div>
-
-      <div class="well well-form">
-        <b>{{ form.campo8.label }}</b>
-        <br />
-        {{ form.campo8 }}
-      </div>
-
-    </div><!-- End Left Column -->
-
-    <!-- Right Column
-    ================================================== -->
-    <div class="col-sm-6">
-
-      <div class="well well-form">
-        <b>{{ form.campo9.label }}</b>
-        <br />
-        {{ form.campo9 }}
-      </div>
-
-      <div class="well well-form">
-        <b>{{ form.campo10.label }}</b>
-        <br />
-        {{ form.campo10 }}
-      </div>
-
-      <div class="well well-form">
-        <b>{{ form.campo11.label }}</b>
-        <br />
-        {{ form.campo11 }}
-      </div>
-
-      <div class="well well-form">
-        <b>{{ form.campo12.label }}</b>
-        <br />
-        {{ form.campo12 }}
-      </div>
-
-      <div class="well well-form">
-        <b>{{ form.campo13.label }}</b>
-        <br />
-        {{ form.campo13 }}
+        {{ form.fecha }}
       </div>
 
     </div><!-- End Right Column -->
 
   </div><!-- End Row -->
+
+  <hr />
+
+  <h2>Notas Finales</h2>
+  <table border="1px" cellpadding="0px" cellspacing="0px" style="width:100%">
+    <thead>
+      <tr>
+        <th>N</th>
+        <th>Nombre del Alumno</th>
+        <th>Cédula de Identidad</th>
+        <th>Nota Final</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>{{ form.nombre_alumno1 }}</td>
+        <td>{{ form.cedula_alumno1 }}</td>
+        <td>{{ form.nota_alumno1 }}</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>{{ form.nombre_alumno2 }}</td>
+        <td>{{ form.cedula_alumno2 }}</td>
+        <td>{{ form.nota_alumno2 }}</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>{{ form.nombre_alumno3 }}</td>
+        <td>{{ form.cedula_alumno3 }}</td>
+        <td>{{ form.nota_alumno3 }}</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>{{ form.nombre_alumno4 }}</td>
+        <td>{{ form.cedula_alumno4 }}</td>
+        <td>{{ form.nota_alumno4 }}</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>{{ form.nombre_alumno5 }}</td>
+        <td>{{ form.cedula_alumno5 }}</td>
+        <td>{{ form.nota_alumno5 }}</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>{{ form.nombre_alumno6 }}</td>
+        <td>{{ form.cedula_alumno6 }}</td>
+        <td>{{ form.nota_alumno6 }}</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>{{ form.nombre_alumno7 }}</td>
+        <td>{{ form.cedula_alumno7 }}</td>
+        <td>{{ form.nota_alumno7 }}</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>{{ form.nombre_alumno8 }}</td>
+        <td>{{ form.cedula_alumno8 }}</td>
+        <td>{{ form.nota_alumno8 }}</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>{{ form.nombre_alumno9 }}</td>
+        <td>{{ form.cedula_alumno9 }}</td>
+        <td>{{ form.nota_alumno9 }}</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>{{ form.nombre_alumno9 }}</td>
+        <td>{{ form.cedula_alumno9 }}</td>
+        <td>{{ form.nota_alumno9 }}</td>
+      </tr>
+      <tr>
+    </tbody>
+  </table>
+
+  <br/>
 
   <a href="/"><button type="button" class="btn btn-primary">Volver</button></a>
   <button class="btn btn-info" type="reset">Limpiar</button>

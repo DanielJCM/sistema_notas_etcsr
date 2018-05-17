@@ -113,3 +113,7 @@ ul.errorlist {
 .jumbotron {
   background: #f8f8f8;
 }
+
+.well-form-fecha {
+  display: none;
+}
