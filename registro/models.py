@@ -55,11 +55,16 @@ class Planilla(models.Model):
     cedula_alumno10= models.CharField(max_length=8, blank=True,null=True)
     nota_alumno10= models.CharField(max_length=2, blank=True,null=True)
 
-
-
-    
+    def __unicode__(self):
+        return self.entrada    
     def __unicode__(self):
         return self.campo1
 
     def get_absolute_url(self):
         return reverse('registro:editar_planilla', kwargs={'pk': self.pk})
+
+class Bitacora(models.Model):
+    entrada = models.CharField(max_length=200)
+
+    def __unicode__(self):
+        return self.entrada

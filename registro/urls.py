@@ -17,4 +17,5 @@ urlpatterns = patterns('',
     url(r'^registrar_planilla$', views.Registrar_planilla.as_view(), name='registrar_planilla'),
     url(r'^editar_planilla/(?P<pk>\d+)$', views.Editar_planilla.as_view(), name='editar_planilla'),
     url(r'^borrar_planilla/(?P<pk>\d+)$', views.Borrar_planilla.as_view(), name='borrar_planilla'),
+    url(r'^bitacora', views.BitacoraView.as_view(), name='bitacora'),
 )
