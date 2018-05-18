@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django import forms
-from registro.models import Bien
+from registro.models import Planilla
 from django.forms import (
     TextInput, CharField, Select, RadioSelect, Textarea, CheckboxInput, DateTimeField
 )
@@ -31,9 +31,9 @@ estados = (
     ('Desincorporado','Desincorporado'),
 )
 
-class BienForm(forms.ModelForm):
+class PlanillaForm(forms.ModelForm):
     """
-    Formulario con los campos de un bien de CENDITEL.
+    Formulario con los campos de una planilla.
     """
     campo0 = forms.CharField(label='Nombre del Profesor', widget=TextInput(attrs={
         'class':'form-control input-md',
@@ -156,5 +156,5 @@ class BienForm(forms.ModelForm):
 
     class Meta:
 
-        model = Bien
+        model = Planilla
         fields = '__all__'

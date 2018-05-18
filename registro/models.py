@@ -4,9 +4,9 @@ from django.core.urlresolvers import reverse
 from datetime import datetime
 
 
-class Bien(models.Model):
+class Planilla(models.Model):
     """
-    Modelo de un bien de CENDITEL.
+    Modelo de una planilla.
     """
     campo0 = models.CharField(max_length=100, blank=True,null=True)
     campo1 = models.CharField(max_length=100, blank=True,null=True)
@@ -62,4 +62,4 @@ class Bien(models.Model):
         return self.campo1
 
     def get_absolute_url(self):
-        return reverse('registro:editar_bien', kwargs={'pk': self.pk})
+        return reverse('registro:editar_planilla', kwargs={'pk': self.pk})
