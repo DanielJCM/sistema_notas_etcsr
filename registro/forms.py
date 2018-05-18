@@ -8,12 +8,12 @@ from datetime import *
 from django.contrib.admin.widgets import AdminDateWidget
 
 secciones = (
-    ('A', 'Seccion A'),
-    ('B', 'Seccion B'),
-    ('C', 'Seccion C'),
-    ('D', 'Seccion D'),
-    ('E', 'Seccion E'),
-    ('F', 'Seccion F')
+    ('A', 'Sección A'),
+    ('B', 'Sección B'),
+    ('C', 'Sección C'),
+    ('D', 'Sección D'),
+    ('E', 'Sección E'),
+    ('F', 'Sección F')
 )
 
 sit_jur = (
@@ -47,13 +47,13 @@ class PlanillaForm(forms.ModelForm):
         #'placeholder': des_campo4,
     }), required = False)
 
-    campo2 = forms.CharField(label='Mencion', widget=TextInput(attrs={
+    campo2 = forms.CharField(label='Mención', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         #'placeholder': des_campo4,
     }), required = False)
 
-    campo3 = forms.ChoiceField(label='Seccion', widget=Select(attrs={
+    campo3 = forms.ChoiceField(label='Sección', widget=Select(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), choices = secciones)
