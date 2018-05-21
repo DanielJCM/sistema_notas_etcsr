@@ -16,6 +16,8 @@ Usaremos $ para los comandos como usuario regular
 
 ```python
 
+$ pip install -r requirements.txt
+
 $ cd sistema_notas_etcsr
 
 $ cp settings.py_example settings.py
