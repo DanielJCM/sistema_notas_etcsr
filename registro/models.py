@@ -56,7 +56,7 @@ class Planilla(models.Model):
     nota_alumno10= models.CharField(max_length=2, blank=True,null=True)
 
     def __unicode__(self):
-        return self.entrada    
+        return self.usuario    
     def __unicode__(self):
         return self.campo1
 
@@ -64,7 +64,10 @@ class Planilla(models.Model):
         return reverse('registro:editar_planilla', kwargs={'pk': self.pk})
 
 class Bitacora(models.Model):
-    entrada = models.CharField(max_length=200)
+    usuario = models.CharField(max_length=200, blank=True,null=True)
+    modificacion = models.CharField(max_length=200, blank=True,null=True)
+    fecha = models.DateField(default=datetime.now, help_text='Fecha')
 
     def __unicode__(self):
-        return self.entrada
+        return self.usuario
+        return self.modificacion
