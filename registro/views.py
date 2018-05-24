@@ -15,7 +15,6 @@ from django.db.models import Count
 from django.template import RequestContext
 from datetime import datetime
 
-
 class Index(TemplateView):
     """
     Plantilla de inicio del sistema
@@ -64,7 +63,7 @@ class Registrar_planilla(SuccessMessageMixin,CreateView):
         self.object = form.save()
         #print "***** El usuario: "+str(self.request.user)+", registro una persona el: "+str(datetime.now())+" *****"
         a = "El usuario: "+str(self.request.user)+", registro una planilla el: "+str(datetime.now())
-        Bitacora.objects.create(entrada=a)
+        Bitacora.objects.create(usuario=a)
         return super(Registrar_planilla, self).form_valid(form)
 
 
@@ -84,8 +83,8 @@ class Editar_planilla(SuccessMessageMixin,UpdateView):
         self.object = form.save()
         #print "***** El usuario: "+str(self.request.user)+", actualizo una persona el: "+str(datetime.now())+" *****"
         a = "El usuario: "+str(self.request.user)+", actualizó una planilla el: "+str(datetime.now())
-        Bitacora.objects.create(entrada=a)
-        return super(Editar, self).form_valid(form)
+        Bitacora.objects.create(usuario=a)
+        return super(Editar_planilla, self).form_valid(form)
 
 class Borrar_planilla(SuccessMessageMixin,DeleteView):
     """
@@ -101,11 +100,9 @@ class Borrar_planilla(SuccessMessageMixin,DeleteView):
         template cuando se borra una planilla.
         """
         messages.success(self.request, self.success_message)
-        return super(Borrar_planilla, self).delete(request, *args, **kwargs)
-
         a = "El usuario: "+str(self.request.user)+", elimino una planilla el: "+str(datetime.now())
-        Bitacora.objects.create(entrada=a)
-        return super(Borrar, self).delete(self, request, *args, **kwargs)
+        Bitacora.objects.create(usuario=a)
+        return super(Borrar_planilla, self).delete(self, request, *args, **kwargs)
 
 class BitacoraView(ListView):
     """
