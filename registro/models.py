@@ -64,7 +64,8 @@ class Planilla(models.Model):
         return reverse('registro:editar_planilla', kwargs={'pk': self.pk})
 
 class Bitacora(models.Model):
-    usuario = models.CharField(max_length=200, blank=True,null=True)
-
+    accion = models.CharField(max_length=200, blank=True,null=True)
+    fecha = models.CharField(max_length=200, blank=True,null=True)
+    
     def __unicode__(self):
-        return self.usuario
+        return self.accion

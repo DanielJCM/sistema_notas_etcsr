@@ -5,21 +5,24 @@
 
 <br />
 
-<table border="1px" id="example" class="display" cellspacing="0px" style="width:100%;">
+<table border="1px" id="examplee" class="display" cellspacing="0px" style="width:100%;">
   <thead>
     <tr>
-      <th>Eventos</th>
+      <th>Acción</th>
+      <th>Fecha</th>
     </tr>
   </thead>
   <tfoot>
     <tr>
-      <th>Eventos</th>
+      <th>Acción</th>
+      <th>Fecha</th>
     </tr>
   </tfoot>
   <tbody>
   {% for x in object_list %}
   <tr>
-    <td>{{ x.usuario }}</td>
+    <td>{{ x.accion }}</td>
+    <td>{{ x.fecha }}</td>
   </tr>
   {% endfor %}
   </tbody>

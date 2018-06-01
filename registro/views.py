@@ -65,8 +65,9 @@ class Registrar_planilla(SuccessMessageMixin,CreateView):
 
         self.object = form.save()
         #print "***** El usuario: "+str(self.request.user)+", registro una persona el: "+str(datetime.now())+" *****"
-        a = "El usuario: "+str(self.request.user)+", registro una planilla el: "+str(formatedDate)
-        Bitacora.objects.create(usuario=a)
+        a = "El usuario: "+str(self.request.user)+", registro una planilla"
+        b = str(formatedDate)
+        Bitacora.objects.create(accion=a, fecha=b)
         return super(Registrar_planilla, self).form_valid(form)
 
 
@@ -88,8 +89,9 @@ class Editar_planilla(SuccessMessageMixin,UpdateView):
 
         self.object = form.save()
         #print "***** El usuario: "+str(self.request.user)+", actualizo una persona el: "+str(datetime.now())+" *****"
-        a = "El usuario: "+str(self.request.user)+", actualizó una planilla el: "+str(formatedDate)
-        Bitacora.objects.create(usuario=a)
+        a = "El usuario: "+str(self.request.user)+", actualizo una planilla"
+        b = str(formatedDate)
+        Bitacora.objects.create(accion=a, fecha=b)
         return super(Editar_planilla, self).form_valid(form)
 
 class Borrar_planilla(SuccessMessageMixin,DeleteView):
@@ -111,8 +113,7 @@ class Borrar_planilla(SuccessMessageMixin,DeleteView):
         messages.success(self.request, self.success_message)
         a = "El usuario: "+str(self.request.user)+", elimino una planilla"
         b = str(formatedDate)
-        Bitacora.objects.create(accion=a)
-        Bitacora.objects.create(fecha=b)
+        Bitacora.objects.create(accion=a, fecha=b)
         return super(Borrar_planilla, self).delete(self, request, *args, **kwargs)
 
 
