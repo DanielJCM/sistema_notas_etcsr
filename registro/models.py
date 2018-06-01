@@ -65,9 +65,6 @@ class Planilla(models.Model):
 
 class Bitacora(models.Model):
     usuario = models.CharField(max_length=200, blank=True,null=True)
-    modificacion = models.CharField(max_length=200, blank=True,null=True)
-    fecha = models.DateField(default=datetime.now, help_text='Fecha')
 
     def __unicode__(self):
         return self.usuario
-        return self.modificacion

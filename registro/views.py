@@ -58,11 +58,14 @@ class Registrar_planilla(SuccessMessageMixin,CreateView):
 
     def form_valid(self, form):
         """
-        Método que muestra cual usuario y cuando registro a una persona y lo guara en la tabla bitacora
+        Método que muestra cual usuario y cuando registro a una persona y lo guarda en la tabla bitacora
         """
+        myDate = datetime.now()
+        formatedDate = myDate.strftime("%d-%m-%Y %H:%M")
+
         self.object = form.save()
         #print "***** El usuario: "+str(self.request.user)+", registro una persona el: "+str(datetime.now())+" *****"
-        a = "El usuario: "+str(self.request.user)+", registro una planilla el: "+str(datetime.now())
+        a = "El usuario: "+str(self.request.user)+", registro una planilla el: "+str(formatedDate)
         Bitacora.objects.create(usuario=a)
         return super(Registrar_planilla, self).form_valid(form)
 
@@ -78,11 +81,14 @@ class Editar_planilla(SuccessMessageMixin,UpdateView):
 
     def form_valid(self, form):
         """
-        Método que muestra cual usuario y cuando actualizo a una persona y lo guara en la tabla bitacora
+        Método que muestra cual usuario y cuando actualizo a una persona y lo guarda en la tabla bitacora
         """
+        myDate = datetime.now()
+        formatedDate = myDate.strftime("%d-%m-%Y %H:%M")
+
         self.object = form.save()
         #print "***** El usuario: "+str(self.request.user)+", actualizo una persona el: "+str(datetime.now())+" *****"
-        a = "El usuario: "+str(self.request.user)+", actualizó una planilla el: "+str(datetime.now())
+        a = "El usuario: "+str(self.request.user)+", actualizó una planilla el: "+str(formatedDate)
         Bitacora.objects.create(usuario=a)
         return super(Editar_planilla, self).form_valid(form)
 
@@ -99,10 +105,16 @@ class Borrar_planilla(SuccessMessageMixin,DeleteView):
         Función que permite mandar un mensaje al
         template cuando se borra una planilla.
         """
+        myDate = datetime.now()
+        formatedDate = myDate.strftime("%d-%m-%Y %H:%M")
+
         messages.success(self.request, self.success_message)
-        a = "El usuario: "+str(self.request.user)+", elimino una planilla el: "+str(datetime.now())
-        Bitacora.objects.create(usuario=a)
+        a = "El usuario: "+str(self.request.user)+", elimino una planilla"
+        b = str(formatedDate)
+        Bitacora.objects.create(accion=a)
+        Bitacora.objects.create(fecha=b)
         return super(Borrar_planilla, self).delete(self, request, *args, **kwargs)
+
 
 class BitacoraView(ListView):
     """
@@ -110,3 +122,11 @@ class BitacoraView(ListView):
     """
     model = Bitacora
     template_name = "registro/bitacora.html"
+
+    def get_queryset(self):
+        """
+        Método que filtra los datos de la tabla, solo muestra si coincide con el filtro
+        """
+        #queryset = Bitacora.objects.filter(tipo='Actualización')
+        queryset = Bitacora.objects.order_by('-id')
+        return queryset
