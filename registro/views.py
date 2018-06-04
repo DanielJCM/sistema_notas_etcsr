@@ -117,6 +117,14 @@ class Borrar_planilla(SuccessMessageMixin,DeleteView):
         return super(Borrar_planilla, self).delete(self, request, *args, **kwargs)
 
 
+class Ver_planilla(DetailView):
+    """
+    Clase que permite visualizar los datos de una planilla.
+    """
+    model = Planilla
+    template_name = "registro/planilla_detail.html"
+
+
 class BitacoraView(ListView):
     """
     Clase que muestra la lista de entradas de la bitácora
