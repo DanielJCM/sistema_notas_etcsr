@@ -1,0 +1,517 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"i",
+				"imprimir"
+			],
+			[
+				"me",
+				"meta\tTag"
+			],
+			[
+				"HT",
+				"HTMLtoPDF"
+			],
+			[
+				"dat",
+				"datetime"
+			],
+			[
+				"plan",
+				"Planilla"
+			],
+			[
+				"B",
+				"Borrar_planilla"
+			],
+			[
+				"te",
+				"template_name"
+			],
+			[
+				"form",
+				"formatedDate"
+			],
+			[
+				"for",
+				"formatedDate"
+			],
+			[
+				"b",
+				"b"
+			],
+			[
+				"str",
+				"strftime"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"bg",
+				"background-color"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"SEC",
+				"secciones"
+			],
+			[
+				"Ge",
+				"GENERO_CHOICES"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/cenditel/Daniel/sistema_notas_etcsr_prueba/registro/templates/registro/planilla_detail.html",
+			"settings":
+			{
+				"buffer_size": 1615,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/cenditel/Daniel/sistema_notas_etcsr_prueba/registro/models.py",
+			"settings":
+			{
+				"buffer_size": 3235,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/cenditel/Daniel/bootstrap_templates_examples/bootstrap_theme_base_example/index.html",
+			"settings":
+			{
+				"buffer_size": 39806,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/cenditel/Daniel/sistema_notas_etcsr_prueba",
+		"/home/cenditel/Daniel/sistema_notas_etcsr_prueba/base",
+		"/home/cenditel/Daniel/sistema_notas_etcsr_prueba/registro",
+		"/home/cenditel/Daniel/sistema_notas_etcsr_prueba/registro/templates",
+		"/home/cenditel/Daniel/sistema_notas_etcsr_prueba/registro/templates/registro",
+		"/home/cenditel/Daniel/sistema_notas_etcsr_prueba/sistema_notas_etcsr",
+		"/home/cenditel/Daniel/sistema_notas_etcsr_prueba/static/datatables",
+		"/home/cenditel/Daniel/sistema_notas_etcsr_prueba/static/datatables/js",
+		"/home/cenditel/Daniel/sistema_notas_etcsr_prueba/static/js"
+	],
+	"file_history":
+	[
+		"/home/cenditel/Daniel/sistema_notas_etcsr_prueba/registro/templates/registro/prueba.js",
+		"/home/cenditel/Daniel/sistema_notas_etcsr_prueba/static/jspdf/jspdf.html",
+		"/home/cenditel/Daniel/sistema_notas_etcsr_prueba/registro/templates/registro/hm.html",
+		"/home/cenditel/Documentos/prueba.js",
+		"/home/cenditel/Daniel/sistema_notas_etcsr_prueba/static/admin/css/base.css",
+		"/home/cenditel/Daniel/sistema_notas_etcsr_prueba/static/datatables/js/jquery.dataTables.min.js",
+		"/home/cenditel/Daniel/sistema_notas_etcsr_prueba/registro/templates/registro/base.html",
+		"/home/cenditel/Daniel/sistema_notas_etcsr_prueba/registro/templates/registro/planilla_detail.html",
+		"/home/cenditel/Daniel/sistema_notas_etcsr_prueba/registro/templates/registro/planilla_list.html",
+		"/home/cenditel/Daniel/sistema_notas_etcsr_prueba/base/templates/base/base.html",
+		"/home/cenditel/Daniel/sistema_notas_etcsr_prueba/registro/templates/registro/bitacora.html",
+		"/home/cenditel/Daniel/sistema_notas_etcsr_prueba/registro/views.py",
+		"/home/cenditel/Daniel/sistema_notas_etcsr_prueba/registro/models.py",
+		"/home/cenditel/Descargas/ListView_Example2.py",
+		"/home/cenditel/Descargas/ListView_Example.py",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/base/templates/base/base.html",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/registro/templates/registro/base.html",
+		"/home/cenditel/Daniel/sistema_notas_etcsr_prueba/registro/admin.py",
+		"/home/cenditel/Daniel/sistema_notas_etcsr_prueba/sistema_notas_etcsr/urls.py",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/registro/views.py",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/registro/models.py",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/registro/templates/registro/planilla_list.html",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/registro/templates/registro/planilla_form.html",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/registro/urls.py",
+		"/home/cenditel/Daniel/django_blog/app_blog/views.py",
+		"/home/cenditel/Daniel/django_blog/app_blog/urls.py",
+		"/home/cenditel/Daniel/django_blog/app_blog/templates/app_blog/post_list.html",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/registro/templates/registro/post_detail.html",
+		"/home/cenditel/Daniel/django_blog/app_blog/templates/app_blog/post_detail.html",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/registro/templates/registro/bitacora.html",
+		"/home/cenditel/Daniel/django_blog/base/templates/base/base.html",
+		"/home/cenditel/Daniel/django_blog/app_blog/templates/app_blog/post_confirm_delete.html",
+		"/home/cenditel/Daniel/django_blog/app_blog/templates/app_blog/post_form.html",
+		"/home/cenditel/Daniel/django_blog/app_blog/models.py",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/static/bootstrap/css/bootstrap.css",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/static/css/theme.css",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/static/bootstrap/css/bootstrap-theme.css",
+		"/home/cenditel/Daniel/Entornos_Virtuales_Python/Django/lib/python2.7/site-packages/django/http/response.py",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/registro/forms.py",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/sistema_notas_etcsr/settings.py",
+		"/home/cenditel/Daniel/proyectos_de_git/practicas-python/ejercicios/datetime.py",
+		"/home/cenditel/Daniel/django_bitacora_app/registro/views.py",
+		"/home/cenditel/Daniel/django_bitacora_app/registro/models.py",
+		"/home/cenditel/Daniel/Entornos_Virtuales_Python/Django/local/lib/python2.7/site-packages/django/db/models/base.py",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/sistema_notas_etcsr/settings.py_example",
+		"/home/cenditel/Daniel/modelos_django/modelos_django/settings.py",
+		"/home/cenditel/Daniel/modelos_django/modelos_django/settings.pyc",
+		"/home/cenditel/Daniel/django_bitacora_app/django_bitacora_app/settings.py",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/sistema_notas_etcsr/settings.pyc",
+		"/home/cenditel/Daniel/django_bitacora_app/registro/templates/registro/persona_list.html",
+		"/home/cenditel/Daniel/django_bitacora_app/registro/admin.py",
+		"/home/cenditel/Daniel/django_bitacora_app/registro/urls.py",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/sistema_notas_etcsr/urls.py",
+		"/home/cenditel/Daniel/django_bitacora_app/django_bitacora_app/urls.py",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/usuarios/views.py",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/registro/admin.py",
+		"/home/cenditel/Daniel/django_bitacora_app/registro/templates/registro/bitacora.html",
+		"/home/cenditel/Daniel/django_bitacora_app/registro/templates/registro/base.html",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/manage.py",
+		"/home/cenditel/Daniel/django_bitacora_app/registro/urls.pyc",
+		"/home/cenditel/Daniel/django_bitacora_app/registro/models.pyc",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/registro/templates/registro/bien_list.html",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/registro/templates/registro/index.html",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/registro/templates/registro/bien_form.html",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/registro/templates/registro/bien_confirm_delete.html",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/usuarios/tests.py",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/usuarios/models.py",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/usuarios/forms.py",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/base/models.py",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/usuarios/admin.py",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/base/admin.py",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/base/views.py",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/README.md",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/usuarios/templates/usuarios/login.html",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/.gitignore",
+		"/home/cenditel/Daniel/Se crean las opciones de Alumno y Profesor.txt",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/.git/config",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/AUTHORS.txt",
+		"/home/cenditel/Daniel/sistema_notas_etcsr/sistema_notas_etcsr/wsgi.py",
+		"/home/cenditel/Daniel/Inventario/registro/models.py",
+		"/home/cenditel/Daniel/inventario/registro/models.py",
+		"/home/cenditel/Daniel/inventario/static/css/theme.css",
+		"/home/cenditel/Daniel/inventario/registro/templates/registro/bien_list.html",
+		"/home/cenditel/Daniel/inventario/registro/templates/registro/bien_form.html",
+		"/home/cenditel/Daniel/inventario/registro/forms.py",
+		"/home/cenditel/Daniel/inventario/registro/urls.py",
+		"/home/cenditel/Daniel/inventario/base/templates/base/base.html",
+		"/home/cenditel/Daniel/inventario/registro/templates/registro/index.html",
+		"/home/cenditel/Daniel/inventario/registro/templates/registro/bien_confirm_delete.html",
+		"/home/cenditel/Daniel/inventario/usuarios/urls.py",
+		"/home/cenditel/Daniel/inventario/registro/views.py",
+		"/home/cenditel/Daniel/sistema-de-notas/sistemaDeNotas/manage.py",
+		"/home/cenditel/Daniel/modelos_django/encuesta/models.py",
+		"/home/cenditel/Daniel/Entornos_Virtuales_Python/Django/lib/python2.7/site-packages/django/views/generic/edit.py",
+		"/home/cenditel/Daniel/Entornos_Virtuales_Python/Django/lib/python2.7/site-packages/django/forms/forms.py",
+		"/home/cenditel/Daniel/inventario/usuarios/views.py",
+		"/home/cenditel/Daniel/inventario/base/views.py",
+		"/home/cenditel/Daniel/inventario/base/models.py",
+		"/home/cenditel/Daniel/inventario/usuarios/forms.py",
+		"/home/cenditel/Daniel/inventario/usuarios/templates/usuarios/login.html",
+		"/home/cenditel/Daniel/modelos_django/encuesta/constantes.py",
+		"/home/cenditel/Daniel/modelos_django/encuesta/views.py",
+		"/home/cenditel/Daniel/Entornos_Virtuales_Python/Django/lib/python2.7/site-packages/django/contrib/auth/forms.py",
+		"/home/cenditel/Daniel/Entornos_Virtuales_Python/Django/local/lib/python2.7/site-packages/django/forms/forms.py",
+		"/home/cenditel/Daniel/Entornos_Virtuales_Python/Django/local/bin/django-admin.py",
+		"/home/cenditel/Daniel/Entornos_Virtuales_Python/Django/lib/python2.7/site-packages/django/contrib/auth/models.py",
+		"/home/cenditel/Daniel/inventario/usuarios/admin.py",
+		"/home/cenditel/Daniel/inventario/usuarios/models.py",
+		"/home/cenditel/Daniel/inventario/static/admin/css/forms.css",
+		"/home/cenditel/Daniel/inventario/registro/admin.py",
+		"/home/cenditel/Daniel/registro_vistas_clases/registro/templates/registro/persona_list.html",
+		"/home/cenditel/Daniel/registro_vistas_clases/registro/constantes.py",
+		"/home/cenditel/Daniel/registro_vistas_clases/registro/models.py",
+		"/home/cenditel/Daniel/registro_vistas_clases/registro/views.py",
+		"/home/cenditel/Daniel/registro_vistas_clases/manage.py",
+		"/home/cenditel/Daniel/modelos_django/encuesta/constantes.pyc",
+		"/home/cenditel/Daniel/Ejercicios/Ejercicios-Python/Python/oprelacionales.py",
+		"/home/cenditel/Daniel/Ejercicios/Ejercicios-Python/Old/map.py",
+		"/home/cenditel/Daniel/Ejercicios/Ejercicios-Python/Old/defsu.py",
+		"/home/cenditel/Daniel/Ejercicios/Ejercicios-Python/Old/clases.py",
+		"/home/cenditel/Daniel/Ejercicios/Ejercicios-Python/Old/append.py",
+		"/home/cenditel/Daniel/Ejercicios/Ejercicios-Python/lista1.py",
+		"/home/cenditel/Daniel/registro_vistas_clases/registro/admin.py"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\n    ",
+			"%;\">\n",
+			"pdf",
+			"jspdf",
+			"example",
+			"pdf",
+			"str(formatedDate)",
+			"tipo",
+			".btn-primary",
+			"_by",
+			"by",
+			"guara",
+			"query",
+			"querys",
+			"queryset",
+			"datetime",
+			"bitacora",
+			"regis",
+			"user",
+			"base",
+			"#",
+			"registrar",
+			"datetime",
+			"bitacora",
+			"bitac",
+			")\n",
+			"bien",
+			"inve",
+			"class User"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/cenditel/Daniel/sistema_notas_etcsr_prueba/registro/templates/registro/planilla_detail.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1615,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1043,
+								1043
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2
+						},
+						"translation.x": 0.0,
+						"translation.y": 378.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/cenditel/Daniel/sistema_notas_etcsr_prueba/registro/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3235,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								250,
+								250
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/cenditel/Daniel/bootstrap_templates_examples/bootstrap_theme_base_example/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 39806,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								24254,
+								24254
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 8047.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "base.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

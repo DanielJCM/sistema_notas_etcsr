@@ -8,10 +8,10 @@ class Planilla(models.Model):
     """
     Modelo de una planilla.
     """
-    campo0 = models.CharField(max_length=100, blank=True,null=True)
-    campo1 = models.CharField(max_length=100, blank=True,null=True)
-    campo2 = models.CharField(max_length=100, blank=True,null=True)
-    campo3 = models.CharField(max_length=100, blank=True,null=True)
+    campo0 = models.CharField(max_length=10000, blank=True,null=True)
+    campo1 = models.CharField(max_length=10000, blank=True,null=True)
+    campo2 = models.CharField(max_length=10000, blank=True,null=True)
+    campo3 = models.CharField(max_length=10000, blank=True,null=True)
     fecha = models.DateField(default=datetime.now, help_text='Fecha')
 
     # Campos de los alumnos
