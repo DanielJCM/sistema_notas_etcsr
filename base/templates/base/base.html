@@ -85,7 +85,7 @@
 
         <br />
 
-        {#% if request.user.is_authenticated %#}
+        {% if request.user.is_authenticated %}
         <!-- Navbar class
         ================================================== -->
         <nav class="navbar navbar-default">
@@ -166,8 +166,8 @@
           </div>
         </nav>
         <!-- End Navbar class -->
-        {#% else %#}
-        {#% endif %#}
+        {% else %}
+        {% endif %}
 
         {% if messages %}
           {% for message in messages %}
