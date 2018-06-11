@@ -2,85 +2,462 @@
 {% block titulo %}Detalle de Planilla{% endblock %}
 {% block cuerpo %}
 {% load staticfiles %}
+<script type="text/javascript">
+function pruebaDivAPdf() {
+  var pdf = new jsPDF('p', 'pt', 'letter');
+  source = $('#imprimir')[0];
 
-<head>
-    <meta charset="utf-8">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
-</head>
-
-<script>
-    function pruebaDivAPdf() {
-        var pdf = new jsPDF('p', 'pt', 'letter');
-        source = $('#imprimir')[0];
-
-        specialElementHandlers = {
-            '#bypassme': function (element, renderer) {
-                return true
-            }
-        };
-        margins = {
-            top: 80,
-            bottom: 60,
-            left: 40,
-            width: 522
-        };
-
-        pdf.fromHTML(
-            source, 
-            margins.left, // x coord
-            margins.top, { // y coord
-                'width': margins.width, 
-                'elementHandlers': specialElementHandlers
-            },
-
-            function (dispose) {
-                pdf.save('Detalle.pdf');
-            }, margins
-        );
+  specialElementHandlers = {
+    '#bypassme': function (element, renderer) {
+      return true
     }
+  };
+  margins = {
+    top: 80,
+    bottom: 60,
+    left: 40,
+    width: 522
+  };
+
+  pdf.fromHTML(
+    source, 
+    margins.left, // x coord
+    margins.top, { // y coord
+      'width': margins.width, 
+      'elementHandlers': specialElementHandlers
+    },
+
+    function (dispose) {
+      pdf.save('Detalle.pdf');
+    }, margins
+  );
+}
 </script>
-    <div id="imprimir">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Nombre del Profesor</h3>
-            </div>
-            <div class="panel-body">
-              {{ planilla.campo0 }}
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Materia</h3>
-            </div>
-            <div class="panel-body">
-              {{ planilla.campo1 }}
-            </div>
-          </div>
-        </div><!-- /.col-sm-4 -->
-        <div class="col-sm-4">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Mención</h3>
-            </div>
-            <div class="panel-body">
-              {{ planilla.campo2 }}
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Sección</h3>
-            </div>
-            <div class="panel-body">
-              {{ planilla.campo3 }}
-            </div>
-          </div>
-        </div><!-- /.col-sm-4 -->
+    
+<div id="imprimir">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <label>Nombre del Profesor</label>
+          </h3>
+        </div>
+        <div class="panel-body">
+          {{ planilla.campo0 }}
+        </div>
       </div>
-    </div>
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <label>Materia</label>
+          </h3>
+        </div>
+        <div class="panel-body">
+          {{ planilla.campo1 }}
+        </div>
+      </div>
+    </div><!-- /.col-sm-4 -->
+    <div class="col-sm-6">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <label>Mención</label>
+          </h3>
+        </div>
+        <div class="panel-body">
+          {{ planilla.campo2 }}
+        </div>
+      </div>
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <label>Sección</label>
+          </h3>
+        </div>
+        <div class="panel-body">
+          {{ planilla.campo3 }}
+        </div>
+      </div>
+    </div><!-- /.col-sm-4 -->
+  </div>
+  <br />
 
-<a href="javascript:pruebaDivAPdf()" class="button">PDF</a>
+  <table class="tabla_alumnos" border="1px" style="width:100%">
+    <thead>
+      <tr>
+        <th><b>N</b></th>
+        <th><b>Nombre del Alumno</b></th>
+        <th><b>Cédula de Identidad</b></th>
+        <th><b>Nota Final</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        {% if planilla.nombre_alumno1 %}
+        <tr>
+          <td>1</td>
+          <td>{{ planilla.nombre_alumno1 }}</td>
+          <td>{{ planilla.cedula_alumno1 }}</td>
+          <td>{{ planilla.nota_alumno1 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno2 %}
+        <tr>
+          <td>2</td>
+          <td>{{ planilla.nombre_alumno2 }}</td>
+          <td>{{ planilla.cedula_alumno2 }}</td>
+          <td>{{ planilla.nota_alumno2 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno3 %}
+        <tr>
+          <td>3</td>
+          <td>{{ planilla.nombre_alumno3 }}</td>
+          <td>{{ planilla.cedula_alumno3 }}</td>
+          <td>{{ planilla.nota_alumno3 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno4 %}
+        <tr>
+          <td>4</td>
+          <td>{{ planilla.nombre_alumno4 }}</td>
+          <td>{{ planilla.cedula_alumno4 }}</td>
+          <td>{{ planilla.nota_alumno4 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno5 %}
+        <tr>
+          <td>5</td>
+          <td>{{ planilla.nombre_alumno5 }}</td>
+          <td>{{ planilla.cedula_alumno5 }}</td>
+          <td>{{ planilla.nota_alumno5 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno6 %}
+        <tr>
+          <td>6</td>
+          <td>{{ planilla.nombre_alumno6 }}</td>
+          <td>{{ planilla.cedula_alumno6 }}</td>
+          <td>{{ planilla.nota_alumno6 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno7 %}
+        <tr>
+          <td>7</td>
+          <td>{{ planilla.nombre_alumno7 }}</td>
+          <td>{{ planilla.cedula_alumno7 }}</td>
+          <td>{{ planilla.nota_alumno7 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno8 %}
+        <tr>
+          <td>8</td>
+          <td>{{ planilla.nombre_alumno8 }}</td>
+          <td>{{ planilla.cedula_alumno8 }}</td>
+          <td>{{ planilla.nota_alumno8 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno9 %}
+        <tr>
+          <td>9</td>
+          <td>{{ planilla.nombre_alumno9 }}</td>
+          <td>{{ planilla.cedula_alumno9 }}</td>
+          <td>{{ planilla.nota_alumno9 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+         {% if planilla.nombre_alumno10 %}
+        <tr>
+          <td>10</td>
+          <td>{{ planilla.nombre_alumno10 }}</td>
+          <td>{{ planilla.cedula_alumno10 }}</td>
+          <td>{{ planilla.nota_alumno10 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno11 %}
+        <tr>
+          <td>11</td>
+          <td>{{ planilla.nombre_alumno11 }}</td>
+          <td>{{ planilla.cedula_alumno11 }}</td>
+          <td>{{ planilla.nota_alumno11 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno12 %}
+        <tr>
+          <td>12</td>
+          <td>{{ planilla.nombre_alumno12 }}</td>
+          <td>{{ planilla.cedula_alumno12 }}</td>
+          <td>{{ planilla.nota_alumno12 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno13 %}
+        <tr>
+          <td>13</td>
+          <td>{{ planilla.nombre_alumno13 }}</td>
+          <td>{{ planilla.cedula_alumno13 }}</td>
+          <td>{{ planilla.nota_alumno13 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno14 %}
+        <tr>
+          <td>14</td>
+          <td>{{ planilla.nombre_alumno14 }}</td>
+          <td>{{ planilla.cedula_alumno14 }}</td>
+          <td>{{ planilla.nota_alumno14 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno15 %}
+        <tr>
+          <td>15</td>
+          <td>{{ planilla.nombre_alumno15 }}</td>
+          <td>{{ planilla.cedula_alumno15 }}</td>
+          <td>{{ planilla.nota_alumno15 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno16 %}
+        <tr>
+          <td>16</td>
+          <td>{{ planilla.nombre_alumno16 }}</td>
+          <td>{{ planilla.cedula_alumno16 }}</td>
+          <td>{{ planilla.nota_alumno16 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno17 %}
+        <tr>
+          <td>17</td>
+          <td>{{ planilla.nombre_alumno17 }}</td>
+          <td>{{ planilla.cedula_alumno17 }}</td>
+          <td>{{ planilla.nota_alumno17 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno18 %}
+        <tr>
+          <td>18</td>
+          <td>{{ planilla.nombre_alumno18 }}</td>
+          <td>{{ planilla.cedula_alumno18 }}</td>
+          <td>{{ planilla.nota_alumno18 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno19 %}
+        <tr>
+          <td>19</td>
+          <td>{{ planilla.nombre_alumno19 }}</td>
+          <td>{{ planilla.cedula_alumno19 }}</td>
+          <td>{{ planilla.nota_alumno19 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno20 %}
+        <tr>
+          <td>20</td>
+          <td>{{ planilla.nombre_alumno20 }}</td>
+          <td>{{ planilla.cedula_alumno20 }}</td>
+          <td>{{ planilla.nota_alumno20 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno21 %}
+        <tr>
+          <td>21</td>
+          <td>{{ planilla.nombre_alumno21 }}</td>
+          <td>{{ planilla.cedula_alumno21 }}</td>
+          <td>{{ planilla.nota_alumno21 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno22 %}
+        <tr>
+          <td>22</td>
+          <td>{{ planilla.nombre_alumno22 }}</td>
+          <td>{{ planilla.cedula_alumno22 }}</td>
+          <td>{{ planilla.nota_alumno22 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno23 %}
+        <tr>
+          <td>23</td>
+          <td>{{ planilla.nombre_alumno23 }}</td>
+          <td>{{ planilla.cedula_alumno23 }}</td>
+          <td>{{ planilla.nota_alumno23 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno24 %}
+        <tr>
+          <td>24</td>
+          <td>{{ planilla.nombre_alumno24 }}</td>
+          <td>{{ planilla.cedula_alumno24 }}</td>
+          <td>{{ planilla.nota_alumno24 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno25 %}
+        <tr>
+          <td>25</td>
+          <td>{{ planilla.nombre_alumno25 }}</td>
+          <td>{{ planilla.cedula_alumno25 }}</td>
+          <td>{{ planilla.nota_alumno25 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno26 %}
+        <tr>
+          <td>26</td>
+          <td>{{ planilla.nombre_alumno26 }}</td>
+          <td>{{ planilla.cedula_alumno26 }}</td>
+          <td>{{ planilla.nota_alumno26 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno27 %}
+        <tr>
+          <td>27</td>
+          <td>{{ planilla.nombre_alumno27 }}</td>
+          <td>{{ planilla.cedula_alumno27 }}</td>
+          <td>{{ planilla.nota_alumno27 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno28 %}
+        <tr>
+          <td>28</td>
+          <td>{{ planilla.nombre_alumno28 }}</td>
+          <td>{{ planilla.cedula_alumno28 }}</td>
+          <td>{{ planilla.nota_alumno28 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno29 %}
+        <tr>
+          <td>29</td>
+          <td>{{ planilla.nombre_alumno29 }}</td>
+          <td>{{ planilla.cedula_alumno29 }}</td>
+          <td>{{ planilla.nota_alumno29 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno30 %}
+        <tr>
+          <td>30</td>
+          <td>{{ planilla.nombre_alumno30 }}</td>
+          <td>{{ planilla.cedula_alumno30 }}</td>
+          <td>{{ planilla.nota_alumno30 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno31 %}
+        <tr>
+          <td>31</td>
+          <td>{{ planilla.nombre_alumno31 }}</td>
+          <td>{{ planilla.cedula_alumno31 }}</td>
+          <td>{{ planilla.nota_alumno31 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno32 %}
+        <tr>
+          <td>32</td>
+          <td>{{ planilla.nombre_alumno32 }}</td>
+          <td>{{ planilla.cedula_alumno32 }}</td>
+          <td>{{ planilla.nota_alumno32 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno33 %}
+        <tr>
+          <td>33</td>
+          <td>{{ planilla.nombre_alumno33 }}</td>
+          <td>{{ planilla.cedula_alumno33 }}</td>
+          <td>{{ planilla.nota_alumno33 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno34 %}
+        <tr>
+          <td>34</td>
+          <td>{{ planilla.nombre_alumno34 }}</td>
+          <td>{{ planilla.cedula_alumno34 }}</td>
+          <td>{{ planilla.nota_alumno34 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno35 %}
+        <tr>
+          <td>35</td>
+          <td>{{ planilla.nombre_alumno35 }}</td>
+          <td>{{ planilla.cedula_alumno35 }}</td>
+          <td>{{ planilla.nota_alumno35 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno36 %}
+        <tr>
+          <td>36</td>
+          <td>{{ planilla.nombre_alumno36 }}</td>
+          <td>{{ planilla.cedula_alumno36 }}</td>
+          <td>{{ planilla.nota_alumno36 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno37 %}
+        <tr>
+          <td>37</td>
+          <td>{{ planilla.nombre_alumno37 }}</td>
+          <td>{{ planilla.cedula_alumno37 }}</td>
+          <td>{{ planilla.nota_alumno37 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno38 %}
+        <tr>
+          <td>38</td>
+          <td>{{ planilla.nombre_alumno38 }}</td>
+          <td>{{ planilla.cedula_alumno38 }}</td>
+          <td>{{ planilla.nota_alumno38 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno39 %}
+        <tr>
+          <td>39</td>
+          <td>{{ planilla.nombre_alumno39 }}</td>
+          <td>{{ planilla.cedula_alumno39 }}</td>
+          <td>{{ planilla.nota_alumno39 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}
+        {% if planilla.nombre_alumno40 %}
+        <tr>
+          <td>40</td>
+          <td>{{ planilla.nombre_alumno40 }}</td>
+          <td>{{ planilla.cedula_alumno40 }}</td>
+          <td>{{ planilla.nota_alumno40 }}</td>
+        </tr>
+        {% else %}
+        {% endif %}                              
+    </tbody>
+  </table>
+</div>
+
+<br />
+
+<button onclick="pruebaDivAPdf()">Exportar PDF</button>
 {% endblock %}
-
-

@@ -121,3 +121,26 @@ ul.errorlist {
 .jumbotron-green {
   background: #008B8B;
 }
+
+.tabla_alumnos, th, td {
+  border: 1px solid lightgray;
+}
+.tabla_alumnos th{
+  padding: 15px;
+  text-align: center;
+  background-color: #008B8B;
+  color: #000;
+}
+.tabla_alumnos td {
+  padding: 10px;
+}
+
+#id_autor {
+  display: none;
+}
+
+.panel-success > .panel-heading {
+  color: #000;
+  background-color: #008B8B;
+  border-color: #d6e9c6;
+}

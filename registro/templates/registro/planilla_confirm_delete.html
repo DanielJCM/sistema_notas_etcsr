@@ -2,10 +2,10 @@
 {% block titulo %}Borrar Alumno{% endblock %}
 {% block cuerpo %}
 <form method="post">{% csrf_token %}
-  ¿Estás seguro que quieres eliminar a: "<b>{{ object }}"</b>?
+  ¿Estás seguro que quieres eliminar la planilla de la materia: <b>"{{ object.campo1 }}"</b> registrada por <b>{{ object.campo0 }}</b> ?
   <br />
   <br />
-  <a href="/consultar_bien"><button type="button" class="btn btn-primary">Volver</button></a>
+  <a href="/consultar_planilla"><button type="button" class="btn btn-primary">Volver</button></a>
   <button class="btn btn-danger" type="submit">Borrar</button>
 </form>
 {% endblock %}
