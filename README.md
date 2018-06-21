@@ -42,6 +42,10 @@ $ bash reset_db.sh
 $ python manage.py runserver
 ```
 
+## Manual
+
+En el directorio /docs se encuentra el manual de instalación y uso del sistema.
+
 ## Capturas
 
 ![captura.png](captura.png "captura.png")
